@@ -4,7 +4,7 @@ import {
   getWeatherFromCoords,
   getCoordsFromApi,
   cleanText,
-  currentWeather,
+  getCurrentWeather,
 } from './dataFunctions.js';
 import {
   setPlaceholderText,
@@ -159,7 +159,7 @@ const updateDataAndDisplay = async (locationObj) => {
   const weatherJson = await getWeatherFromCoords(locationObj);
   // console.log(weatherJson);
   // console.log(locationObj);
-  const currentWeatherJson = await currentWeather(locationObj, WEATHER_API_KEY);
+  const currentWeatherJson = await getCurrentWeather(locationObj);
   // console.log(currentWeatherJson);
   if (weatherJson) updateDisplay(currentWeatherJson, weatherJson, locationObj);
 };
