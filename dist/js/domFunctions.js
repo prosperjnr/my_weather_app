@@ -60,11 +60,7 @@ export const updateScreenReaderConfirmation = (message) => {
   document.getElementById('confirmation').textContent = message;
 };
 
-export const updateDisplay = async (
-  currentWeatherJson,
-  weatherJson,
-  locationObj
-) => {
+export const updateDisplay = (currentWeatherJson, weatherJson, locationObj) => {
   fadeDisplay();
   clearDisplay();
   const weatherClass = getWeatherClass(currentWeatherJson.weather[0].icon);
